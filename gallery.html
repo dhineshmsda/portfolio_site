@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery - Short Images</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="gallery-container">
+    <h2>📷 My Gallery of webpages</h2>
+    <div class="gallery">
+      <div class="gallery-item short"><img src="paavaimech_1.png" alt="Image 1"></div>
+      <div class="gallery-item short"><img src="paavaimech_2.png" alt="Image 2"></div>
+      <div class="gallery-item short"><img src="paavaimech_3.png" alt="Image 3"></div>
+      <div class="gallery-item short"><img src="piday_1.jpg" alt="Image 4"></div>
+      <div class="gallery-item short"><img src="piday_2.jpg" alt="Image 5"></div>
+      <div class="gallery-item short"><img src="tmcc_1.png" alt="Image 6"></div>
+      <div class="gallery-item short"><img src="tmcc_2.png" alt="Image 7"></div>
+      <div class="gallery-item short"><img src="tmcc_3.png" alt="Image 8"></div>
+    </div>
+  </section>
+</body>
+<style>
+    body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .gallery-item img {
+    height: 150px;
+  }
+}
+
+</style>
+</html>
